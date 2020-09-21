@@ -1,0 +1,7 @@
+.DS_Store
+mix-manifest.json
+/.env
+/.idea
+/vendor
+/node_modules
+/web/cpresources

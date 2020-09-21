@@ -1,0 +1,38 @@
+fieldLayouts:
+  569b29be-115f-4e31-a4c2-6ae3a29e9beb:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: images
+hasUrls: true
+name: Images
+settings:
+  path: '@webroot/uploads/images'
+sortOrder: 1
+type: craft\volumes\Local
+url: /uploads/images
