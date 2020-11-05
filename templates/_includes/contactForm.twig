@@ -1,0 +1,63 @@
+
+<section class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-9 mb-5 mx-auto text-center">
+        <h2 class="heading-divider mb-3">Contact Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit dicta repellat, sit aut at nulla quam sed, neque voluptatum deserunt, vero ipsum natus sint culpa illo. Vel, sed, assumenda.</p>
+      </div>
+      <div class="col-md-6 contact-form">
+
+        {% macro errorList(errors) %}
+          {% if errors %}
+            <ul class="errors">
+              {% for error in errors %}
+                <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endmacro %}
+
+        {% from _self import errorList %}
+
+        <form method="post" action="" accept-charset="UTF-8">
+          {{ csrfInput() }}
+          <input type="hidden" name="action" value="contact-form/send">
+          {{ redirectInput('/') }}
+
+          <h3><label for="from-name">Your Name</label></h3>
+          <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
+          {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+
+          <h3><label for="from-email">Your Email</label></h3>
+          <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}">
+          {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+
+          <h3><label for="subject">Subject</label></h3>
+          <input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}">
+          {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+
+          <h3><label for="message">Message</label></h3>
+          <textarea rows="1" cols="40" id="message" name="message">{{ message.message ?? '' }}</textarea>
+          {{ message is defined and message ? errorList(message.getErrors('message')) }}
+
+          <input type="submit" class="btn btn-sm btn-primary" value="Send">
+        </form>
+
+      </div>
+      <div class="col-md-6 contact-content">
+        <h5>Phone:</h5>
+        <a href="#" class="mb-3">01234 567890</a>
+        <h5>Email:</h5>
+        <a href="#" class="mb-5">placeholder@email.com</a>
+        <h5>Follow Me</h5>
+        <ul class="social-links">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </row>
+  </div>
+</section>

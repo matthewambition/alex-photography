@@ -1,0 +1,53 @@
+field: 02422068-461a-4ae8-b733-076bb1a22d75
+fieldLayouts:
+  a06f9a88-8c1a-4b6f-8525-3eaa60d27830:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 94270003-152f-41f6-a9ee-e14fc7919463
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  94270003-152f-41f6-a9ee-e14fc7919463:
+    contentColumnType: string
+    fieldGroup: null
+    handle: galleryImages
+    instructions: ''
+    name: 'Gallery Images'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:619914d2-d5e1-413a-a5f9-98c9989d5955'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: true
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:619914d2-d5e1-413a-a5f9-98c9989d5955'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: gallery
+name: Gallery
+sortOrder: 3

@@ -1,0 +1,81 @@
+fieldLayouts:
+  89eec24f-107d-413d-9be7-9aa49a71da9a:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: cd312d95-e092-49c7-86d7-e2dbec15bcd0
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b4fd501d-7e3d-4f0e-b659-79a56c0fad3e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4178193d-f605-463e-a155-ca8552292ca7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4f3bc4a0-2ffb-40ca-8cc7-74ead2a594c9
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 07d2bdf6-f0a3-4841-bfaa-2636ede7a00d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: af83d4d6-57f2-4702-a057-97c40feeb389
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 32516d05-b17a-407d-8a55-94336f7c36cb
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4cbacb12-10ca-4284-978b-2da465ab9694
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Footer Section'
+        sortOrder: 1
+handle: siteSettings
+name: 'Site Settings'

@@ -6,6 +6,7 @@ mix.combine([
 	'node_modules/jquery/dist/jquery.js',
 	'node_modules/popper.js/dist/umd/popper.min.js',
 	'node_modules/bootstrap/dist/js/bootstrap.min.js',
+	'src/js/vendor/*.js',
 	],
 	'web/assets/js/vendor.js');
 

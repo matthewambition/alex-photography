@@ -1,0 +1,14 @@
+
+{% set gallery = block.galleryImages.all() %}
+
+{% for image in gallery %}
+
+  <div class="service-item col-12 col-md-6 col-lg-4 text-center">
+    <div class="hover-overflow">
+      <a href="#"><img class="img-fluid" src="{{ image.url() }}" alt="{{ image.title }}">
+        <div class="hover-overlay"></div>
+      </a>
+    </div>
+  </div>
+
+{% endfor %}

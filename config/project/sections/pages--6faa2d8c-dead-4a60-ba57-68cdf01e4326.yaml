@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: pages
+name: Pages
+propagationMethod: all
+siteSettings:
+  975b61b7-7678-4e53-9d19-ab12192c66e9:
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/index
+    uriFormat: '{slug}'
+type: channel

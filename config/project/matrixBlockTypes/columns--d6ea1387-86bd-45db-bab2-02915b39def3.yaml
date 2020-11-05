@@ -1,0 +1,70 @@
+field: 02422068-461a-4ae8-b733-076bb1a22d75
+fieldLayouts:
+  a43d6a9c-8be9-4fd0-90a7-d72ded6c4357:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 04fe9a7e-7028-4835-aa7b-b1aef604b2a8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  04fe9a7e-7028-4835-aa7b-b1aef604b2a8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sectionContent
+    instructions: ''
+    name: 'Section Content'
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          -
+            - d19bdb75-9f53-4028-b95d-2dfec7b82085
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 6347d7b2-39f0-4d17-a7ee-0cae537f3a68
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - e6935a02-f226-4659-a80d-cbd98860d6c7
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 3da07926-ad06-43e5-b888-f6deec952419
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_1_sectioncontent}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: '1'
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: 'Add a column'
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: columns
+name: Columns
+sortOrder: 1

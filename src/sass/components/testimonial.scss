@@ -1,0 +1,30 @@
+
+.testimonial-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0 !important;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    padding: 80px 0 !important;
+  }
+
+  &:after {
+    background-color: #000;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: .3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .testimonial-body {
+    z-index: 1;
+  }
+}

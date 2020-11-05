@@ -2,27 +2,62 @@
 // ******************************************************************************
 
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   color: $gray-900;
   font-weight: 300;
   line-height: 30px;
+  text-align: center;
+
+  &.heading-divider {
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+
+    &:after {
+      background-color: #848484;
+      bottom: -4px;
+      content: '';
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 100px;
+
+      @include media-breakpoint-up(sm) {
+        bottom: 50%;
+        width: 150%;
+        z-index: -1;
+      }
+    }
+  }
 }
 
 h1 {
   font-size: 28px;
-  margin-bottom: 10px;
-  text-align: center;
+  line-height: 34px;
+  margin-bottom: 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 38px;
+    line-height: 44px;
+  }
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 32px;
 
   @media only screen and (min-width: 768px) {
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 34px;
   }
 }
 
@@ -34,6 +69,15 @@ h3 {
   }
 }
 
+h4 {
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
 strong {
   font-weight: 500;
 }
@@ -41,6 +85,7 @@ strong {
 a {
   color: $primary;
   font-size: 14px;
+  transition: .3s ease;
 
   @media only screen and (min-width: 768px) {
 	  font-size: 16px;
@@ -48,12 +93,31 @@ a {
 }
 
 p {
-  font-size: 14px;
+  color: $gray-900;
+  font-size: 16px;
+  line-height: 25px;
   margin-bottom: 0;
   margin-left: 0;
-  text-align: center;
 
   @media only screen and (min-width: 768px) {
-	  font-size: 16px;
+	  font-size: 18px;
   }
+}
+
+blockquote, cite {
+  color: #fff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  text-shadow: 0 0 10px #000;
+}
+
+blockquote {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+cite {
+  display: block;
+  font-style: normal;
 }

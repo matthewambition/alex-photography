@@ -3,7 +3,7 @@
 */
 
 // Remote Fontsets
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300%3B400%3B700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300%3B0,400%3B1,300%3B1,400&display=swap');
 
 // Set up custom variables and mixins
 @import "base/variables";
@@ -13,9 +13,13 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Base
-@import "base/site-blocks";
+@import "base/theme";
 @import "base/typography";
 @import "base/utilities";
+
+// Vendor
+@import "vendor/photoswipe/main";
+@import "vendor/photoswipe/default-skin/default-skin";
 
 // Pages
 @import "pages/home";
@@ -26,3 +30,14 @@
 @import "layout/structure";
 
 // Components
+@import "components/avatar";
+@import "components/cards";
+@import "components/columns";
+@import "components/contact-form";
+@import "components/cta";
+@import "components/dark-mode-btn";
+@import "components/gallery";
+@import "components/hero";
+@import "components/modal";
+@import "components/social-links";
+@import "components/testimonial";

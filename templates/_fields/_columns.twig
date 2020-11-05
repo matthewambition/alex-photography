@@ -1,0 +1,10 @@
+
+{% set sectionContent = block.sectionContent.all() %}
+
+{% for block in sectionContent %}
+
+  <div class="{{ block.columnWidth }} {{ block.contentAlignment }} {{ block.verticalAlignment }}">
+    {{ block.columnContent }}
+  </div>
+
+{% endfor %}

@@ -1,0 +1,58 @@
+
+.card-section {
+  .card {
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+    max-width: 450px;
+    padding-bottom: 40px;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    .card-inner {
+      border-radius: 8px;
+      box-shadow: 0 6px 10px 0px #e8e8e8;
+      padding: 0;
+      position: relative;
+
+      .card-media {
+        img {
+          border-radius: 8px 8px 0 0;
+        }
+      }
+
+      .card-body {
+        padding: 30px;
+
+        h4, p {
+          text-align: left !important;
+        }
+      }
+
+      .card-link {
+        padding: 0 30px 10px;
+        text-align: right;
+
+        a {
+          font-size: 24px;
+
+          i {
+            transition: .2s ease;
+          }
+
+          &:hover {
+            i {
+              margin-right: -6px;
+            }
+          }
+
+          @include media-breakpoint-up(md) {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}

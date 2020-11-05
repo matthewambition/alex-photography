@@ -1,0 +1,31 @@
+
+.social-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin-right: 30px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    i {
+      color: #4a4a4a;
+      transition: .3s ease;
+
+      &:hover {
+        color: #000;
+      }
+
+      .footer-modules & {
+        color: #6d6c6c;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

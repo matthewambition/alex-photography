@@ -1,0 +1,24 @@
+{#
+ # Main site layout template
+ # -------------------------
+-#}
+
+{% extends "_layouts/structure/base" %}
+
+{% block body %}
+
+  <div class="site-wrapper">
+
+    {% include "_includes/globalHeader" %}
+
+    <!-- Main Content Section -->
+    <main role="main">
+      {% block main %}{% endblock %}
+    </main>
+    <!-- Main Content Section Ends -->
+
+    {% include "_includes/globalFooter" %}
+
+  </div> <!-- Site Wrapper Ends -->
+
+{% endblock %}

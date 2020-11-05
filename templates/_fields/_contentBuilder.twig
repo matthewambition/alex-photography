@@ -1,0 +1,20 @@
+
+{% for block in entry.contentBuilder.all() %}
+
+  {% if block.type == "testimonial" %}
+
+    {% include "_fields/_" ~ block.type %}
+
+  {% else %}
+
+    <section class="{{ block.type }}-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          {% include "_fields/_" ~ block.type %}
+        </div>
+      </div>
+    </section>
+
+  {% endif %}
+
+{% endfor %}

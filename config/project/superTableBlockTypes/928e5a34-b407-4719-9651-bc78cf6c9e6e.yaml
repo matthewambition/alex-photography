@@ -1,0 +1,147 @@
+field: 19927377-c56e-4144-b84f-6d0cc38a016c
+fieldLayouts:
+  b9a58000-8a5d-40f1-8be4-adb3cd57b1ca:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d708584e-4617-4fbe-ab4f-5f37ed4d8807
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 719937cb-745e-40bb-bcc2-eb0615eecc40
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 78721213-4597-49e5-a33a-9a9d07b42c34
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f3ab37c1-d864-4512-989f-9e3bb502ca30
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  719937cb-745e-40bb-bcc2-eb0615eecc40:
+    contentColumnType: string
+    fieldGroup: null
+    handle: avatar
+    instructions: ''
+    name: Avatar
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:619914d2-d5e1-413a-a5f9-98c9989d5955'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:619914d2-d5e1-413a-a5f9-98c9989d5955'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  78721213-4597-49e5-a33a-9a9d07b42c34:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialQuote
+    instructions: ''
+    name: 'Testimonial Quote'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d708584e-4617-4fbe-ab4f-5f37ed4d8807:
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundImage
+    instructions: ''
+    name: 'background Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:619914d2-d5e1-413a-a5f9-98c9989d5955'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: 'Choose a background image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:619914d2-d5e1-413a-a5f9-98c9989d5955'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  f3ab37c1-d864-4512-989f-9e3bb502ca30:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testimonialCite
+    instructions: ''
+    name: 'Testimonial Cite'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

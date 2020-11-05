@@ -1,0 +1,57 @@
+contentColumnType: text
+fieldGroup: 68752381-aca8-48a6-a9c9-9fab8af1ea54
+handle: mainNav
+instructions: ''
+name: 'Main Nav'
+searchable: true
+settings:
+  addRowLabel: 'Add a Nav Item'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Nav Title'
+            -
+              - handle
+              - navTitle
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Nav URL'
+            -
+              - handle
+              - navUrl
+            -
+              - width
+              - ''
+            -
+              - type
+              - url
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

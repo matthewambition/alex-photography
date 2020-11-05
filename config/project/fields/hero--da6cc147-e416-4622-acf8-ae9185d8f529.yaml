@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: cdac4bb0-6723-4166-b9dd-a27834a46669
+handle: hero
+instructions: ''
+name: Hero
+searchable: true
+settings:
+  contentTable: '{{%stc_hero}}'
+  fieldLayout: row
+  maxRows: '1'
+  minRows: '0'
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

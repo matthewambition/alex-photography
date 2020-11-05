@@ -1,0 +1,25 @@
+
+{% set categoryQuery = craft.categories().group('services') %}
+{% set categories = categoryQuery.all() %}
+
+{% nav category in categories %}
+
+  {% set gallery = craft.assets.relatedTo({
+      targetElement: category,
+      field: 'categories'
+    }).all()
+  %}
+
+  <div class="service-item col-12 col-sm-6 col-md-4 text-center">
+    <div class="hover-overflow">
+      <a href="{{ category.url }}">
+        <img class="img-fluid" src="{{ category.featuredImage.one().url({ transform: 'square' }) }}">
+        <div class="hover-overlay"></div>
+      </a>
+      <div class="service-details">
+        <h5 class="mb-0">{{ category.title }}</h5>
+        <p>{{ gallery|length }} Photos</p>
+      </div>
+    </div>
+  </div>
+{% endnav %}

@@ -1,0 +1,203 @@
+
+body {
+  &.dark-theme {
+    background-color: $gray-700;
+
+    // Typography //
+    h1, h2, h3, h4, h5, h6, p, li, a {
+      color: #fff !important;
+    }
+
+    // Nav //
+    .navbar {
+      background-color: $gray-800;
+
+      .navbar-toggler {
+        .navbar-toggler-icon {
+          i {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+
+    // Heading Divider //
+    .heading-divider {
+      background-color: $gray-700;
+
+      &:after {
+        background-color: #fff;
+      }
+    }
+
+    ///// Components/Sections /////
+
+    // Cards //
+    .card-section {
+      .card {
+        .card-inner {
+          box-shadow: 0 6px 10px 0px $gray-800;
+        }
+      }
+    }
+
+    .callToAction-section {
+      border-top-color: $gray-800;
+
+      .btn-primary {
+        background-color: #bd2727;
+        border-color: #bd2727;
+      }
+    }
+
+    footer {
+      background-color: $gray-800;
+    }
+  }
+
+  // Style for System Preference //
+  @media (prefers-color-scheme: dark) {
+    background-color: $gray-700;
+
+    // Typography //
+    h1, h2, h3, h4, h5, h6, p, li, a {
+      color: #fff !important;
+    }
+
+    // Nav //
+    .navbar {
+      background-color: $gray-800 !important;
+
+      .navbar-toggler {
+        .navbar-toggler-icon {
+          i {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+
+    // Heading Divider //
+    .heading-divider {
+      background-color: $gray-700 !important;
+
+      &:after {
+        background-color: #fff;
+      }
+    }
+
+    ///// Components/Sections /////
+
+    // Cards //
+    .card-section {
+      .card {
+        .card-inner {
+          box-shadow: 0 6px 10px 0px $gray-800;
+        }
+      }
+    }
+
+    .callToAction-section {
+      border-top-color: $gray-800;
+
+      .btn-primary {
+        background-color: #bd2727;
+        border-color: #bd2727;
+      }
+    }
+
+    footer {
+      background-color: $gray-800;
+    }
+
+    // Override System Preference //
+    &.light-theme {
+      background-color: #fff;
+
+      // Typography //
+      h1, h2, h3, h4, h5, h6, p, li, a {
+        color: $gray-900 !important;
+      }
+
+      // Nav //
+      .navbar {
+        background-color: #f1f1f1 !important;
+
+        .navbar-toggler {
+          .navbar-toggler-icon {
+            i {
+              color: #000 !important;
+            }
+          }
+        }
+      }
+
+      // Hero //
+      .hero-section {
+        h1, p {
+          color: #fff !important;
+        }
+      }
+
+      // Heading Divider //
+      .heading-divider {
+        background-color: #fff !important;
+
+        &:after {
+          background-color: #848484 !important;
+        }
+      }
+
+      ///// Components/Sections /////
+
+      // Cards //
+      .card-section {
+        .card {
+          .card-inner {
+            box-shadow: 0 6px 10px 0px #e8e8e8 !important;
+          }
+        }
+      }
+
+      // Services Section //
+      .services-section {
+        .service-item {
+          .service-details {
+            h5, p {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+
+      // CTA Section //
+      .callToAction-section {
+        border-top-color: #dee2e6 !important;
+
+        .btn-primary {
+          background-color: #f23a2e !important;
+          border-color: #f23a2e !important;
+          color: #fff !important;
+        }
+      }
+
+      footer {
+        background-color: #333 !important;
+
+        h4 {
+          color: #fff !important;
+        }
+
+        p, li, a {
+          color: #737373 !important;
+
+          li, a {
+            &:hover {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

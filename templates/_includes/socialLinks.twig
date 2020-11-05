@@ -1,0 +1,15 @@
+
+<ul class="social-links">
+  {% if siteSettings.facebook|length %}
+    <li><a href="{{ siteSettings.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+  {% endif %}
+  {% if siteSettings.twitter|length %}
+    <li><a href="{{ siteSettings.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+  {% endif %}
+  {% if siteSettings.instagram|length %}
+    <li><a href="{{ siteSettings.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+  {% endif %}
+  {% if siteSettings.linkedin|length %}
+    <li><a href="{{ siteSettings.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+  {% endif %}
+</ul>

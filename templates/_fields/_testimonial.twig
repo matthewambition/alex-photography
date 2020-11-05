@@ -1,0 +1,23 @@
+
+{% set sectionContent = block.sectionContent.all() %}
+
+{% for block in sectionContent %}
+{% set bgImage = block.backgroundImage.one() %}
+{% set avatar = block.avatar.one() %}
+{% set cite = block.testimonialCite %}
+
+  <section class="testimonial-section" style="background-image: url('{{ bgImage.url() }}')">
+    <div class="container-fluid testimonial-wrapper">
+      <div class="row">
+        <div class="testimonial-body col col-md-10 col-lg-7 mx-md-auto text-center">
+          {% if avatar %}
+            <img class="avatar sm mb-4" src="{{ avatar.url() }}">
+          {% endif %}
+          <blockquote>"{{ block.testimonialQuote }}"</blockquote>
+          <cite>- {{ cite|raw }}</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endfor %}

@@ -1,0 +1,10 @@
+{% do getCookie('theme') %}
+{% do craft.cookies.get('theme') %}
+{% spaceless %}
+{% if getCookie('theme') %}
+  {% set chosenTheme = getCookie('theme') %}
+  {{ chosenTheme }}-theme
+{% else %}
+  light-theme
+{% endif %}
+{% endspaceless %}

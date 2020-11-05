@@ -1,0 +1,70 @@
+
+{% extends "_layouts/structure/site" %}
+
+{% block main %}
+
+  {% set heroContent = category.hero.all() %}
+
+  {% for block in heroContent %}
+    {% set heroImage = block.backgroundImage.one() %}
+    {% set heroStyles = "background-image: url('" ~ heroImage.url() ~ "');"|raw %}
+    {% set avatar = block.avatar.one() %}
+
+    {% if heroImage.hasFocalPoint %}
+      {% set x = heroImage.focalPoint | first * 100 ~ '%' %}
+      {% set y = heroImage.focalPoint | last * 100 ~ '%' %}
+      {% set heroStyles = heroStyles ~ ' background-position: ' ~ [x, y]|join(' ') %}
+    {% endif %}
+
+    <section class="hero-section pb-5 {% if avatar %}pb-0 hero-spacer{% endif %}"{% if heroImage %} style="{{ heroStyles is defined ? heroStyles }}"{% endif %}>
+      <div class="container-fluid hero-wrapper">
+        <div class="row">
+          <div class="col-md-9 mx-md-auto">
+            <h1 class="mb-3">{{ block.heroTitle }}</h1>
+            <p>{{ category.description|raw }}</p>
+          </div>
+        </div>
+      </div>
+      {% if avatar %}
+        <img class="avatar" src="{{ avatar.url() }}">
+      {% endif %}
+    </section>
+
+  {% endfor %}
+
+  <section class="gallery-section">
+    <div class="container">
+      <div class="row resource-item resource-gallery">
+
+        {% set gallery = craft.assets.relatedTo({
+            targetElement: category,
+            field: 'categories'
+          }).all()
+        %}
+
+        {% for image in gallery %}
+          <a class="gallery-item" href="{{ image.url }}" data-size="{{ image.getWidth }}x{{ image.getHeight }}">
+            <img class="img-fluid" src="{{ image.url({ transform: 'square' }) }}" alt="{{ image.title }}">
+          </a>
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section mb-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col text-center">
+          <h2 class="heading-divider">More of my Work</h2>
+        </div>
+      </div>
+      <div class="row mx-3 mx-sm-0">
+
+        {% include "_includes/services" %}
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

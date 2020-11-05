@@ -1,0 +1,22 @@
+
+{% extends "_layouts/structure/site" %}
+{% set entries = craft.entries.section('services') %}
+
+{% block main %}
+
+  <section class="services-section my-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col text-center">
+          <h2 class="heading-divider">My Work</h2>
+        </div>
+      </div>
+      <div class="row mx-3 mx-sm-0">
+
+        {% include "_includes/services" %}
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

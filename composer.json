@@ -1,6 +1,15 @@
 {
   "require": {
-    "craftcms/cms": "^3.5.10",
+    "clarknelson/craft-recaptcha-3": "1.1.1",
+    "craftcms/cms": "3.5.15.1",
+    "craftcms/contact-form": "2.2.7",
+    "craftcms/contact-form-honeypot": "1.0.2",
+    "craftcms/redactor": "2.8.3",
+    "ether/seo": "3.6.6",
+    "nystudio107/craft-cookies": "1.1.12",
+    "sebastianlenz/linkfield": "1.0.23",
+    "verbb/formie": "1.2.25",
+    "verbb/super-table": "2.6.3",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {

@@ -1,0 +1,70 @@
+field: 02422068-461a-4ae8-b733-076bb1a22d75
+fieldLayouts:
+  ffe4507c-c7ac-4c9e-8f06-0fd150a8e465:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 19927377-c56e-4144-b84f-6d0cc38a016c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  19927377-c56e-4144-b84f-6d0cc38a016c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sectionContent
+    instructions: ''
+    name: 'Section Content'
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          -
+            - d708584e-4617-4fbe-ab4f-5f37ed4d8807
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 719937cb-745e-40bb-bcc2-eb0615eecc40
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 78721213-4597-49e5-a33a-9a9d07b42c34
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - f3ab37c1-d864-4512-989f-9e3bb502ca30
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_5_sectioncontent}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: testimonial
+name: Testimonial
+sortOrder: 4

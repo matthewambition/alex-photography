@@ -1,0 +1,11 @@
+
+{% set sectionContent = block.sectionContent.all() %}
+
+{% for block in sectionContent %}
+
+  <div class="col d-md-flex align-items-md-center text-center">
+    <h2 class="mb-5 mb-md-0">{{ block.ctaTitle }}</h2>
+    <a href="{{ block.button.getUrl() }}" class="btn btn-primary ml-md-auto">{{ block.button.getText }}</a>
+  </div>
+
+{% endfor %}

@@ -1,0 +1,30 @@
+
+<header>
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand d-flex align-items-center" href="https://alex-photography.test">
+      <h2>{{ siteName }}</h2>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarTrigger">
+      <span class="navbar-toggler-icon"><i class="fal fa-bars"></i></span>
+    </button>
+
+    <div id="navbarTrigger" class="collapse navbar-collapse">
+      {% if siteSettings.mainNav|length %}
+
+      <ul class="navbar-nav mr-auto mr-md-0 ml-md-auto pl-md-4">
+
+        <li class="dark-mode-toggle">
+          <button><i class="fad fa-moon"></i></button>
+        </li>
+
+        {% for row in siteSettings.mainNav %}
+          <li class="nav-item px-md-2">
+            <a class="nav-link" href="{{ row.navUrl }}">{{ row.navTitle }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% endif %}
+    </div>
+  </nav>
+</header>

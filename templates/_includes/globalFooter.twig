@@ -1,0 +1,36 @@
+
+<footer class="mt-auto">
+  <div class="footer-modules">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 p-3 pr-lg-4">
+          <h4>About Me</h4>
+          <p>{{ siteSettings.aboutUs }}</p>
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+          {% if siteSettings.footerNav|length %}
+            <h4>Navigations</h4>
+            <ul class="footer-nav">
+              {% for row in siteSettings.footerNav %}
+                <li><a href="{{ row.navUrl }}">{{ row.navTitle }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+        <div class="col-12 col-lg-4 p-3">
+          <h4>Follow Me</h4>
+
+          {% include "_includes/socialLinks" %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright container p-3">
+    <div class="row">
+      <div class="col">
+        <p>{{ siteSettings.copyright }} | Created with <i class="fas fa-heart"></i> by&nbsp;<a href="https://www.ambitioncreative.co.uk/" target="_blank">Ambition</a></p>
+      </div>
+    </div>
+  </div>
+</footer>

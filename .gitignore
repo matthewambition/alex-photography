@@ -5,3 +5,4 @@ mix-manifest.json
 /vendor
 /node_modules
 /web/cpresources
+/web/uploads/images

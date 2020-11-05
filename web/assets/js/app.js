@@ -93,7 +93,77 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// Dark Theme Cookie //
+function getCookie(cname) {
+  var name = cname + '=';
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
 
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+
+  return '';
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+$(document).ready(function () {
+  var theme;
+  var sysDarkTheme = window.matchMedia('(prefers-color-scheme: dark)'); // console.log(sysDarkTheme.matches);
+
+  if (sysDarkTheme.matches) {
+    if (getCookie('theme')) {
+      var theme = getCookie('theme');
+      $('body').attr('class', theme + '-theme');
+    } else {
+      $('body').attr('class', 'dark-theme');
+    }
+  }
+
+  $('.dark-mode-toggle').click(function () {
+    if ($('body').hasClass('dark-theme')) {
+      theme = 'light';
+    } else {
+      theme = 'dark';
+    }
+
+    setCookie('theme', theme, 30); // document.cookie = 'theme=' + theme + ';path=/';
+
+    location.reload();
+  });
+
+  if ($(window).width() > 991) {
+    $('.navbar .d-menu').hover(function () {
+      $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+    }, function () {
+      $(this).find('.sm-menu').first().stop(true, true).delay(120).slideUp(100);
+    });
+  }
+
+  var lastSection = $('section:last-of-type');
+
+  if ($(lastSection).hasClass('testimonial-section')) {
+    $(lastSection).addClass('mb-0');
+  }
+
+  if ($('.testimonial-section').next().hasClass('callToAction-section')) {
+    $('.testimonial-section').addClass('mb-0');
+  }
+});
 
 /***/ }),
 
@@ -104,7 +174,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n\n@import \"base/variables\";\n       ^\n      Can't find stylesheet to import.\n  ╷\n9 │ @import \"base/variables\";\r\n  │         ^^^^^^^^^^^^^^^^\n  ╵\n  stdin 9:9  root stylesheet\n      in /Users/matthewcrane/Sites/alex-crane-photography/src/sass/app.scss (line 9, column 9)\n    at /Users/matthewcrane/Sites/alex-crane-photography/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/matthewcrane/Sites/alex-crane-photography/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/matthewcrane/Sites/alex-crane-photography/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass-loader/dist/index.js:89:7\n    at Function.call$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:88191:16)\n    at _render_closure1.call$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:77610:12)\n    at _RootZone.runBinary$3$3 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:26152:18)\n    at _RootZone.runBinary$3 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:26156:19)\n    at _FutureListener.handleError$1 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24600:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24897:40)\n    at Object._Future__propagateToListeners (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:4311:88)\n    at _Future._completeError$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24725:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24117:12)\n    at Object._asyncRethrow (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:4065:17)\n    at /Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:14087:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:4090:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24138:12)\n    at _awaitOnObject_closure0.call$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24130:25)\n    at _RootZone.runBinary$3$3 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:26152:18)\n    at _RootZone.runBinary$3 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:26156:19)\n    at _FutureListener.handleError$1 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24600:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24897:40)\n    at Object._Future__propagateToListeners (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:4311:88)\n    at _Future._completeError$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24725:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24117:12)\n    at Object._asyncRethrow (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:4065:17)\n    at /Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:16672:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:4090:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24138:12)\n    at _awaitOnObject_closure0.call$2 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24130:25)\n    at _RootZone.runBinary$3$3 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:26152:18)\n    at _RootZone.runBinary$3 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:26156:19)\n    at _FutureListener.handleError$1 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24600:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:24897:40)\n    at Object._Future__propagateToListeners (/Users/matthewcrane/Sites/alex-crane-photography/node_modules/sass/sass.dart.js:4311:88)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

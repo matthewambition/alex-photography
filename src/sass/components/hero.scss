@@ -1,0 +1,44 @@
+.hero-section {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  padding-bottom: 0 !important;
+  position: relative;
+
+  &.hero-spacer {
+    margin-bottom: 150px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 200px;
+    }
+  }
+
+  &:after {
+    background-color: #000;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .hero-wrapper {
+    z-index: 1;
+
+    h1, p {
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0 10px #000;
+    }
+  }
+}
